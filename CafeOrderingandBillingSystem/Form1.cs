@@ -119,29 +119,29 @@ namespace CafeOrderingandBillingSystem
 
 
             int input_money = int.Parse(txtBoxInputMoney.Text);
-            if (input_money == 0)
-            {
-                if (input_money < totalbill)
-                {
-                    MessageBox.Show($"Insufficient funds. Please enter an amount greater than or equal to the total bill of {totalbill}.");
-                    return;
-                }
-                else
-                {
 
-                    MessageBox.Show($"===============================\n SHAN'S CAFE \"\n===============================" +
-                            $"\nYour Order:\n\n{orders}\n" +
-                            $"===============================" +
-                            $"\nSubtotal: {totalbill}" +
-                            $"\nDiscount: 0" +
-                            $"\n===============================" +
-                            $"\nTOTAL: {totalbill}" +
-                            $"\nPayment: {input_money}" +
-                            $"\n===============================" +
-                            $"\nChange: {input_money - totalbill}");
-                }
+
+            if (input_money < totalbill)
+            {
+                MessageBox.Show($"Insufficient funds. Please enter an amount greater than or equal to the total bill of {totalbill}.");
+                return;
+            }
+            else
+            {
+
+                MessageBox.Show($"===============================\n SHAN'S CAFE \"\n===============================" +
+                        $"\nYour Order:\n\n{orders}\n" +
+                        $"===============================" +
+                        $"\nSubtotal: {totalbill}" +
+                        $"\nDiscount: 0" +
+                        $"\n===============================" +
+                        $"\nTOTAL: {totalbill}" +
+                        $"\nPayment: {input_money}" +
+                        $"\n===============================" +
+                        $"\nChange: {input_money - totalbill}");
             }
         }
     }
 }
+
 
